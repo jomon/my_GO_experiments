@@ -11,7 +11,7 @@ func main() {
 	fmt.Println(slice1, slice2)
 
 	slice3 := []int{1, 2, 3}
-	slice4 := make([]int, 2)
+	slice4 := make([]int, 2) /*make is the key word for makin slice*/
 	copy(slice4, slice3)
 	fmt.Println(slice3, slice4)
 }
