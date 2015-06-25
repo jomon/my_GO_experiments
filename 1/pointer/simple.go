@@ -10,7 +10,7 @@ func zero(x *int) {
 
 func main() {
 	x := new(int)
-	*x = 10
+	x = 10
 	zero(x)
 	fmt.Println(*x)
 }
