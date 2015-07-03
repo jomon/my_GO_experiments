@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<title>Employee performance</title>
+</head>
+ <body>
+
+    <div id="container4" style="width: 900px; height: 500px;"></div>
+    <div id="container3" style="width: 900px; height: 500px;"></div>
+  </body>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-3d.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://code.highcharts.com/modules/data.src.js"></script>
+</html>
+
+ <script >
+   Highcharts.setOptions({
+    chart: {
+        backgroundColor: '#F0F0F8',
+        shadow: true
+    }
+});
+
+
+$('#container4').highcharts({
+    data: {
+        googleSpreadsheetKey: '1zHtffrLshJ1Jd5mZUG_SQwGlBMu62lmNOjJD9v7tPmQ'
+    },
+    plotOptions: {
+        series: {
+            visible: false
+        }
+    },
+    title: {
+        text: 'Performance'
+    }
+}, function(chart) {
+     chart.series[0].show();   
+});
+
+
+    </script>
+  <script >
+   Highcharts.setOptions({
+    chart: {
+        backgroundColor: '#F0F0F8',
+        shadow: true
+    }
+});
+
+
+
+$('#container3').highcharts({
+    chart: {
+            type: 'pie',
+                options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+    plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            },
+         series: {
+            visible: false
+        }
+        },
+    data: {
+        googleSpreadsheetKey: '1zHtffrLshJ1Jd5mZUG_SQwGlBMu62lmNOjJD9v7tPmQ'
+    },
+    
+    title: {
+        text: 'Performance'
+    }
+}, function(chart) {
+     chart.series[1].show();   
+});
+
+    </script>
+ 
+</html>
